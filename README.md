@@ -1,7 +1,7 @@
 # HTML & CSS Folder for Design Purposes Using CSS
 
 This folder contains my HTML and CSS practice projects.  
-The goal of this setup is to focus purely on **CSS and design**, without worrying about JavaScript or functionality.
+The goal of this setup is to focus on **CSS and design**,
 
 ## 🎯 Purpose
 
@@ -10,7 +10,6 @@ I created this folder to:
 - Improve my CSS skills.
 - Experiment with layouts, animations, and responsive design.
 - Explore modern CSS features and styling techniques.
-- Build visually appealing pages without backend or interactivity.
 
 ## 🧱 Structure
 
