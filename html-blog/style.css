@@ -6,14 +6,23 @@
   box-sizing: border-box;
 }
 
-/* Defaults */
+/* Page Sections */
 
 body {
-  padding: 1rem 1rem;
+  border-top: 10px solid #1089ad;
   color: #444;
   font-family: sans-serif;
-  border-top: 10px solid #1089ad;
+  position: relative;
 }
+
+.container {
+  background-color: #f7f7f7;
+  width: 1024px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* text */
 
 h1,
 h2,
@@ -23,13 +32,14 @@ h4 {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 40px;
   text-transform: uppercase;
   font-style: italic;
+  position: relative;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 26px;
   margin-bottom: 30px;
 }
 
@@ -73,7 +83,7 @@ li:last-child {
 .main-header {
   height: 80px;
   background-color: #f7f7f7;
-  padding: 0 40px;
+  padding-top: 10px;
   margin-bottom: 60px;
 }
 
@@ -94,6 +104,11 @@ nav > ul {
   gap: 1rem;
 }
 
+h2::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
 /* Post header area */
 
 .post-header {
@@ -101,15 +116,40 @@ nav > ul {
 }
 
 .author {
-  font-style: italic;
   font-size: 18px;
+  font-style: italic;
   font-weight: bold;
+}
+
+.post-header div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.post-header h1 {
+  margin-bottom: 10px;
+}
+
+.post-header h1::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: -25px;
 }
 
 /* Aside */
 
 aside {
-  width: 500px;
+  display: flex;
+  width: 100%;
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
@@ -117,8 +157,14 @@ aside {
   padding: 50px 0;
 }
 
+aside h4 {
+  margin-bottom: 40px;
+}
+
 aside > nav > ul > li {
   list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 aside h4 {
@@ -128,6 +174,8 @@ aside h4 {
 /* Footer */
 
 .copyright {
+  text-align: center;
+  padding: 1rem 0;
   font-size: 16px;
 }
 /* Links */
@@ -165,9 +213,13 @@ a:active {
   height: auto;
 }
 
-/* Utils */
+/* Buttons */
 
-.container {
-  width: 1024px;
-  margin: 0 auto;
+.likeBtn {
+  font-size: 22px;
+  position: absolute;
+  padding: 20px;
+  border: 1px solid #444;
+  bottom: 50px;
+  right: 50px;
 }
