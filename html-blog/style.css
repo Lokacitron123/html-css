@@ -17,9 +17,23 @@ body {
 
 .container {
   background-color: #f7f7f7;
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+.blog-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.blog-container > article {
+  flex: 1;
+}
+
+.blog-container > aside {
+  flex: 0 0 300px; /* Smaller column */
 }
 
 /* text */
@@ -40,7 +54,6 @@ h1 {
 
 h2 {
   font-size: 26px;
-  margin-bottom: 30px;
 }
 
 h3 {
@@ -56,22 +69,14 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
-  margin-bottom: 15px;
 }
 
 article {
   margin-bottom: 60px;
 }
 
-ul,
-ol {
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
 li {
   font-size: 20px;
-  margin-bottom: 10px;
 }
 
 li:last-child {
@@ -81,14 +86,12 @@ li:last-child {
 /* Main header */
 
 .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 80px;
   background-color: #f7f7f7;
-  padding-top: 10px;
   margin-bottom: 60px;
-}
-
-.main-header ul {
-  margin: 0;
 }
 
 .main-header li {
@@ -97,6 +100,10 @@ li:last-child {
 
 nav {
   font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav > ul {
@@ -107,6 +114,18 @@ nav > ul {
 h2::first-letter {
   font-style: normal;
   margin-right: 5px;
+}
+
+/* article */
+
+article > ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+article > p {
+  margin-bottom: 20px;
 }
 
 /* Post header area */
@@ -121,7 +140,22 @@ h2::first-letter {
   font-weight: bold;
 }
 
-.post-header div {
+.author > strong {
+  position: relative;
+  display: inline-block;
+}
+
+.author > strong::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orangered;
+}
+
+.author-container {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -148,17 +182,22 @@ h2::first-letter {
 /* Aside */
 
 aside {
-  display: flex;
-  width: 100%;
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   border-radius: 5px;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 aside h4 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+aside > nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 aside > nav > ul > li {
@@ -222,4 +261,22 @@ a:active {
   border: 1px solid #444;
   bottom: 50px;
   right: 50px;
+}
+
+/* Queries */
+
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .likeBtn {
+    font-size: 18px;
+    padding: 15px;
+    bottom: 75px;
+  }
 }
