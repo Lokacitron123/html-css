@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Starter */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1f1f1f;
+  color: white;
+  min-width: 400px;
+}
+
+header,
+footer {
+}
+
+/* Utils */
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Area */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    padding: 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #e8e8e8;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .apps-btn {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    display: inline-block;
+    height: 40px;
+    padding: 4px;
+    position: relative;
+    width: 40px;
+    color: white;
+
+    &:hover {
+      background-color: #303134;
+      border-radius: 50%;
+    }
+  }
+
+  .signin-btn {
+    min-height: 40px;
+    min-width: 85px;
+    padding: 10px 12px;
+    border-radius: 100px;
+    line-height: 18px;
+    border: none;
+    border: none;
+    background: #1a73e8;
+    color: white;
+    margin-left: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(26, 115, 232, 0.5);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.btn {
+  background-color: #303134;
+  color: #e7eaed;
+  border-radius: 8px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #5f6368;
+  }
+}
+
+/* Main */
+
+main {
+  flex: 1;
+}
+
+/* Footer Area */
+footer {
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  div {
+    display: flex;
+    gap: 0.8rem;
+  }
+}
+
+footer > div:first-child {
+  padding: 15px 30px;
+  border-bottom: 1px solid #444746;
+}
+
+footer > div:nth-child(2) {
+  padding: 15px 30px;
+}
