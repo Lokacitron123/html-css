@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+}
+
+/* Util Classes */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+/* Header */
+
+.header__main {
+  position: sticky; /* or fixed if you prefer */
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* semi-transparent if you want image visible underneath */
+  backdrop-filter: blur(5px); /* nice modern effect */
+}
+
+.header__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__logo {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1 / 1;
+}
+
+.header__main ul {
+  display: flex;
+  gap: 1rem;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__media {
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.hero__content {
+  position: relative; /* stacks above image */
+  z-index: 1;
+
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 0 1rem;
+}
+
+.hero__title {
+  font-size: clamp();
+}
+
+.hero__subtitle {
+  font-size: clamp();
+}
+
+.hero__description {
+}
+
+.hero__locations {
+  display: flex;
+}
+
+.hero__location {
+  list-style: none;
+}
