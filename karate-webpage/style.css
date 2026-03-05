@@ -1,3 +1,7 @@
+:root {
+  --red-gradient: linear-gradient(135deg, #ff4d4d, #c1121f);
+}
+
 *,
 *::after,
 *::before {
@@ -27,10 +31,16 @@ section {
 
 /* Util Classes */
 
-.container {
-  max-width: 1200px;
+.wrapper {
+  max-width: min(1680px, 95%);
   margin: 0 auto;
   padding-inline: 1rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Header */
@@ -39,19 +49,13 @@ section {
   position: sticky; /* or fixed if you prefer */
   top: 0;
   z-index: 10;
+  background-color: #fff;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
 
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* semi-transparent if you want image visible underneath */
-  backdrop-filter: blur(5px); /* nice modern effect */
+  a {
+    text-decoration: none;
+  }
 }
 
 .header__logo-container {
@@ -67,6 +71,10 @@ section {
   aspect-ratio: 1 / 1;
 }
 
+.header__logo-title {
+  font-size: clamp(1rem 2vw, 2rem);
+}
+
 .header__main ul {
   display: flex;
   gap: 1rem;
@@ -74,15 +82,11 @@ section {
   li {
     list-style: none;
   }
-
-  a {
-    text-decoration: none;
-  }
 }
 
 /* Hero Section */
 .hero {
-  height: 100dvh;
+  height: 80dvh;
   position: relative;
   overflow: hidden;
 }
@@ -104,32 +108,151 @@ section {
   z-index: 1;
 
   height: 100%;
-  max-width: 480px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+  justify-content: top;
+  align-items: start;
+  gap: 1.5rem;
 
-  padding: 0 1rem;
+  padding-top: clamp(1rem, 5vw, 5rem);
+  padding-bottom: clamp(1rem, 5vw, 5rem);
+  padding-left: clamp(1rem, 5vw, 10rem);
+  padding-right: clamp(1rem, 5vw, 10rem);
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* optional for headings & text */
+  }
 }
 
 .hero__title {
-  font-size: clamp();
+  font-size: clamp(2rem, 5vw, 4rem);
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: clamp(6px, 1vw, 12px);
+    height: clamp(6px, 1vw, 12px);
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 0.25rem;
+  }
 }
 
 .hero__subtitle {
-  font-size: clamp();
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .hero__description {
+  font-size: 1rem;
 }
 
-.hero__locations {
+.hero__cta-container {
   display: flex;
+  gap: 3rem;
 }
 
-.hero__location {
-  list-style: none;
+.hero__cta {
+  padding: 1rem;
+  width: 150px;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Main CTA — gradient background */
+.cta-main {
+  border-radius: 12px;
+  background: var(--red-gradient);
+  color: white; /* better contrast than black */
+  border: none;
+}
+
+/* Optional hover effect */
+.cta-main:hover {
+  filter: brightness(1.1);
+}
+
+/* Secondary CTA — gradient as border + text */
+.cta-second {
+  border-radius: 12px;
+  border: 3px solid transparent; /* placeholder for gradient border */
+  background-clip: padding-box; /* make gradient show only on border */
+  color: #c1121f;
+  position: relative;
+}
+
+/* Trick: gradient border using pseudo-element */
+.cta-second::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* covers entire button */
+  padding: 3px; /* border thickness */
+  border-radius: 12px;
+  background: var(--red-gradient);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Center text inside */
+.cta-second {
+  position: relative;
+  z-index: 1;
+  background: white; /* inner background */
+}
+
+/* What we offer section */
+
+.training {
+  padding: 2rem 0;
+}
+
+.training__title {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: clamp(6px, 1vw, 12px);
+    height: clamp(6px, 1vw, 12px);
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 0.25rem;
+  }
+}
+
+.training__grid {
+  display: flex;
+
+  gap: min(3rem, 6%);
+}
+
+.training__card {
+}
+
+.training__image-wrapper {
+}
+
+.training__image {
+}
+
+.training__content {
+}
+
+.training__card-title {
+}
+
+.training__description {
 }
