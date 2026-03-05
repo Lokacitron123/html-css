@@ -9,38 +9,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header__main container">
-      <div class="header__logo-container">
-        <div>
-          <a href="/">
-            <img
-              class="header__logo"
-              src="./images/logga-helfigur_med_slanda_300dpi_final_no_layers.png"
-              alt="Goju Ryu Karate trollslända emblem"
-            />
-          </a>
-        </div>
-        <div>
-          <p>Students of Goju Ryu</p>
-        </div>
-      </div>
+    <header class="header__main">
+      <div class="wrapper flex-between">
+        <a href="/">
+          <div class="header__logo-container">
+            <div>
+              <img
+                class="header__logo"
+                src="./images/logga-helfigur_med_slanda_300dpi_final_no_layers.png"
+                alt="Goju Ryu Karate trollslända emblem"
+              />
+            </div>
+            <div>
+              <h2 class="header__logo-title">Students of Goju Ryu</h2>
+            </div>
+          </div>
+        </a>
 
-      <nav>
-        <ul>
-          <li><a href="/">Hem</a></li>
-          <li><a href="/">Här finns vi</a></li>
-          <li><a href="/">Vår verksamhet</a></li>
-          <li><a href="/">Dokument</a></li>
-          <li><a href="/">Vanliga Frågor</a></li>
-          <li><a href="/">Om Oss</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul>
+            <li><a href="/">Hem</a></li>
+            <li><a href="/">Här finns vi</a></li>
+            <li><a href="/">Vår verksamhet</a></li>
+            <li><a href="/">Dokument</a></li>
+            <li><a href="/">Vanliga Frågor</a></li>
+            <li><a href="/">Om Oss</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <!-- Hero -->
       <section class="hero">
         <div class="hero__media">
-          <img class="hero__image" src="./images/OIP-1073536383.jpg" alt="" />
+          <img
+            class="hero__image"
+            src="./images/karate.jpg"
+            alt="Karate practitioner holding blackbelt"
+          />
         </div>
 
         <div class="hero__content">
@@ -49,31 +55,121 @@
           <p class="hero__subtitle">Kampkonst & Livsfilosofi</p>
 
           <p class="hero__description">
-            Vi finns här för att hjälpa dig uppnå dina mål
+            Träning för kropp, sinne och själ, <br />välkommen att träna med oss
           </p>
+          <p></p>
+          <div class="hero__cta-container">
+            <a class="hero__cta cta-main" href="">Kontakta oss</a>
+            <a class="hero__cta cta-second" href="">Läs mer</a>
+          </div>
+        </div>
+      </section>
 
-          <ul class="hero__locations">
-            <li class="hero__location">Mariefred</li>
-            <li class="hero__location">Trosa</li>
-            <li class="hero__location">Lund</li>
+      <!-- What we offer -->
+      <section class="training wrapper">
+        <h2 class="training__title">Vad vi erbjuder</h2>
+
+        <div class="training__grid">
+          <!-- Karate -->
+          <a href="#" class="training__card">
+            <div class="training__image-wrapper">
+              <img
+                src="./images/karate.jpg"
+                alt="Karate träning"
+                class="training__image"
+              />
+            </div>
+
+            <div class="training__content">
+              <h3 class="training__card-title">Karate</h3>
+              <p class="training__description">
+                Traditionell Goju Ryu karate med fokus på teknik, disciplin och
+                personlig utveckling.
+              </p>
+            </div>
+          </a>
+
+          <!-- Arnis -->
+          <a href="#" class="training__card">
+            <div class="training__image-wrapper">
+              <img
+                src="./images/arnis.jpg"
+                alt="Arnis träning"
+                class="training__image"
+              />
+            </div>
+
+            <div class="training__content">
+              <h3 class="training__card-title">Arnis</h3>
+              <p class="training__description">
+                Filippinsk kampsport med fokus på vapenteknik, rörelse och
+                självförsvar.
+              </p>
+            </div>
+          </a>
+
+          <!-- Yoga -->
+          <a href="#" class="training__card">
+            <div class="training__image-wrapper">
+              <img
+                src="./images/yoga.jpg"
+                alt="Yoga träning"
+                class="training__image"
+              />
+            </div>
+
+            <div class="training__content">
+              <h3 class="training__card-title">Yoga</h3>
+              <p class="training__description">
+                Yoga för balans, rörlighet och återhämtning som kompletterar din
+                kampsportsträning.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!--Why train with us -->
+      <section>
+        <h2>Varför träna med oss</h2>
+        <div>
+          <p>beskrivande kort text</p>
+          <ul>
+            <li>anledning</li>
+            <li>anledning</li>
+            <li>anledning</li>
+            <li>anledning</li>
+            <li>anledning</li>
           </ul>
         </div>
       </section>
 
-      <!-- Karate -->
+      <!-- Social proof -->
       <section>
-        <h2>Karate</h2>
+        <h2>Vad våra medlemmar tycker</h2>
+        <div>Person</div>
+        <div>Person</div>
+        <div>Person</div>
       </section>
 
-      <!--Arnis -->
+      <!-- About -->
       <section>
-        <h2>Arnis</h2>
+        <h2>Om oss</h2>
+        <p>beskrivande text</p>
+        <a href="">Läs mer</a>
       </section>
 
-      <!-- Yoga -->
       <section>
-        <h2>Yoga</h2>
+        <h2>Var finns vi</h2>
+        <div>
+          <div>plats</div>
+          <div>plats</div>
+          <div>plats</div>
+        </div>
       </section>
+
+      <!-- CTA -->
+      <section>CTA</section>
     </main>
     <footer></footer>
   </body>
