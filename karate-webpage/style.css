@@ -1,5 +1,34 @@
 :root {
-  --red-gradient: linear-gradient(135deg, #ff4d4d, #c1121f);
+  /* ===== Brand ===== */
+
+  /* Rising sun inspired red */
+  --color-primary: #c1121f;
+  --color-primary-light: #ff4d4d;
+  --color-primary-dark: #8b0e18;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+
+  /* ===== Neutrals ===== */
+
+  /* Gi inspired whites */
+  --color-bg-main: #f8f6f2; /* eggshell white (main page background) */
+  --color-bg-soft: #f1eee8; /* subtle section backgrounds */
+  --color-surface: #ffffff; /* cards */
+
+  /* Text colors (not pure black) */
+  --color-text-main: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-text-soft: #777777;
+
+  /* Borders */
+  --color-border: #e4e0d8;
+
+  /* Optional subtle Japanese ink tone */
+  --color-ink: #2b2b2b;
 }
 
 *,
@@ -18,6 +47,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg-main);
 }
 
 main {
@@ -26,7 +56,48 @@ main {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
 section {
+  background: inherit;
+  padding: 2rem 0;
+}
+
+section:nth-of-type(even) {
+  background: var(--color-bg-soft);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: var(--color-text-main);
+}
+
+/* Components */
+
+.section-title {
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: clamp(6px, 1vw, 12px);
+    height: clamp(6px, 1vw, 12px);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-left: 0.25rem;
+  }
 }
 
 /* Util Classes */
@@ -34,7 +105,6 @@ section {
 .wrapper {
   max-width: min(1680px, 95%);
   margin: 0 auto;
-  padding-inline: 1rem;
 }
 
 .flex-between {
@@ -43,19 +113,21 @@ section {
   align-items: center;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* Header */
 
 .header__main {
   position: sticky; /* or fixed if you prefer */
   top: 0;
   z-index: 10;
-  background-color: #fff;
+  background-color: inherit;
 
   padding: 1rem;
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .header__logo-container {
@@ -100,6 +172,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
   opacity: 0.75;
 }
 
@@ -116,16 +189,16 @@ section {
   gap: 1.5rem;
 
   padding-top: clamp(1rem, 5vw, 5rem);
-  padding-bottom: clamp(1rem, 5vw, 5rem);
+  /* padding-bottom: clamp(1rem, 5vw, 5rem);
   padding-left: clamp(1rem, 5vw, 10rem);
-  padding-right: clamp(1rem, 5vw, 10rem);
+  padding-right: clamp(1rem, 5vw, 10rem); */
 }
 
 @media (max-width: 768px) {
   .hero__content {
     justify-content: center;
     align-items: center;
-    text-align: center; /* optional for headings & text */
+    text-align: center;
   }
 }
 
@@ -137,7 +210,7 @@ section {
     display: inline-block;
     width: clamp(6px, 1vw, 12px);
     height: clamp(6px, 1vw, 12px);
-    background-color: red;
+    background-color: var(--color-primary);
     border-radius: 50%;
     margin-left: 0.25rem;
   }
@@ -156,9 +229,200 @@ section {
   gap: 3rem;
 }
 
-.hero__cta {
+/* What we offer section */
+
+.training {
+}
+
+.training__title {
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: clamp(6px, 1vw, 12px);
+    height: clamp(6px, 1vw, 12px);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-left: 0.25rem;
+  }
+}
+
+.training__grid {
+  display: flex;
+  justify-content: space-between;
+  gap: min(3rem, 1.5rem);
+}
+
+@media (max-width: 768px) {
+  .training__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.training__card {
+  width: min(480px, 95%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.training__image-wrapper {
+  width: 100%;
+}
+
+.training__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px 0;
+}
+
+.training__content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.3rem, 1rem);
   padding: 1rem;
-  width: 150px;
+}
+
+.training__card-title {
+  font-size: clamp(1.5rem, 1.2rem, 1rem);
+}
+
+.training__description {
+}
+
+/* Why Train with Us Section */
+
+.why-train {
+}
+
+.why-train__title {
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: clamp(6px, 1vw, 12px);
+    height: clamp(6px, 1vw, 12px);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-left: 0.25rem;
+  }
+}
+
+.why-train__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .why-train__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.why-train__image-wrapper {
+  width: 100%;
+}
+
+.why-train__image {
+  width: 100%;
+}
+
+.why-train__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.why-train__content a:last-child {
+  margin-top: auto;
+}
+
+.why-train__subtitle {
+}
+
+.why-train__description {
+}
+
+.why-train__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.2rem, 1rem);
+}
+
+.why-train__listitem {
+}
+
+/* Social Proof Section */
+
+.social-proof {
+  width: 100%;
+}
+
+.social-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+.social-proof__grid-item {
+  img {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  i {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    float: left; /* floats icon to the left of the text */
+    font-size: 2rem; /* adjust size as needed */
+    line-height: 1; /* prevents extra vertical space */
+    margin-right: 1rem; /* space between icon and text */
+    margin-top: 0.25rem; /* optional: align visually with text */
+    color: var(--color-primary);
+  }
+}
+
+.social-proof__content {
+  margin-top: 1rem;
+  max-width: 480px;
+}
+
+.social-proof__description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.social-proof__img-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Footer */
+
+footer img {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1 / 1;
+}
+
+footer p {
+  font-size: clamp(1rem 2vw, 2rem);
+}
+
+/* CTA Buttons */
+
+.cta {
+  padding: 1rem;
+  min-width: 150px;
 
   text-align: center;
   text-decoration: none;
@@ -172,8 +436,8 @@ section {
 /* Main CTA — gradient background */
 .cta-main {
   border-radius: 12px;
-  background: var(--red-gradient);
-  color: white; /* better contrast than black */
+  background: var(--gradient-primary);
+  color: var(--color-surface);
   border: none;
 }
 
@@ -182,77 +446,16 @@ section {
   filter: brightness(1.1);
 }
 
-/* Secondary CTA — gradient as border + text */
 .cta-second {
   border-radius: 12px;
-  border: 3px solid transparent; /* placeholder for gradient border */
-  background-clip: padding-box; /* make gradient show only on border */
-  color: #c1121f;
-  position: relative;
+  border: 3px solid transparent;
+
+  background:
+    linear-gradient(white, white) padding-box,
+    var(--gradient-primary) border-box;
+  color: var(--color-primary);
 }
 
-/* Trick: gradient border using pseudo-element */
-.cta-second::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* covers entire button */
-  padding: 3px; /* border thickness */
-  border-radius: 12px;
-  background: var(--red-gradient);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Center text inside */
-.cta-second {
-  position: relative;
-  z-index: 1;
-  background: white; /* inner background */
-}
-
-/* What we offer section */
-
-.training {
-  padding: 2rem 0;
-}
-
-.training__title {
-  &::after {
-    content: "";
-    display: inline-block;
-    width: clamp(6px, 1vw, 12px);
-    height: clamp(6px, 1vw, 12px);
-    background-color: red;
-    border-radius: 50%;
-    margin-left: 0.25rem;
-  }
-}
-
-.training__grid {
-  display: flex;
-
-  gap: min(3rem, 6%);
-}
-
-.training__card {
-}
-
-.training__image-wrapper {
-}
-
-.training__image {
-}
-
-.training__content {
-}
-
-.training__card-title {
-}
-
-.training__description {
+.cta-second:hover {
+  filter: brightness(1.1);
 }

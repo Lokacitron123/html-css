@@ -7,6 +7,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Dependancies -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header__main">
@@ -49,7 +58,7 @@
           />
         </div>
 
-        <div class="hero__content">
+        <div class="hero__content wrapper">
           <h1 class="hero__title">Goju Ryu Karate</h1>
 
           <p class="hero__subtitle">Kampkonst & Livsfilosofi</p>
@@ -59,8 +68,8 @@
           </p>
           <p></p>
           <div class="hero__cta-container">
-            <a class="hero__cta cta-main" href="">Kontakta oss</a>
-            <a class="hero__cta cta-second" href="">Läs mer</a>
+            <a class="cta cta-main" href="">Kontakta oss</a>
+            <a class="cta cta-second" href="">Om oss</a>
           </div>
         </div>
       </section>
@@ -93,8 +102,8 @@
           <a href="#" class="training__card">
             <div class="training__image-wrapper">
               <img
-                src="./images/arnis.jpg"
-                alt="Arnis träning"
+                src="./images/karate.jpg"
+                alt="Karate träning"
                 class="training__image"
               />
             </div>
@@ -112,8 +121,8 @@
           <a href="#" class="training__card">
             <div class="training__image-wrapper">
               <img
-                src="./images/yoga.jpg"
-                alt="Yoga träning"
+                src="./images/karate.jpg"
+                alt="Karate träning"
                 class="training__image"
               />
             </div>
@@ -130,26 +139,120 @@
       </section>
 
       <!--Why train with us -->
-      <section>
-        <h2>Varför träna med oss</h2>
-        <div>
-          <p>beskrivande kort text</p>
-          <ul>
-            <li>anledning</li>
-            <li>anledning</li>
-            <li>anledning</li>
-            <li>anledning</li>
-            <li>anledning</li>
-          </ul>
+      <section class="why-train wrapper">
+        <h2 class="why-train__title">Varför träna med oss</h2>
+        <div class="why-train__grid">
+          <div class="why-train__image-wrapper">
+            <img
+              class="why-train__image"
+              src="images/karate.jpg"
+              alt="Karateutövare tränar tillsammans"
+            />
+          </div>
+
+          <div class="why-train__content">
+            <h3 class="why-train__subtitle">Karate – mer än bara träning</h3>
+
+            <p class="why-train__description">
+              Goju Ryu Karate är en traditionell kampkonst från Okinawa som
+              kombinerar slag, sparkar, självförsvar och personlig utveckling.
+              Träningen stärker både kropp och sinne – i en respektfull och
+              välkomnande miljö.
+            </p>
+
+            <ul class="why-train__list">
+              <li class="why-train__listitem">
+                Förbättra styrka, kondition och rörlighet
+              </li>
+              <li class="why-train__listitem">
+                Utveckla fokus, disciplin och självförtroende
+              </li>
+              <li class="why-train__listitem">
+                Lär dig effektivt självförsvar
+              </li>
+              <li class="why-train__listitem">Träna i en positiv gemenskap</li>
+              <li class="why-train__listitem">
+                Passar både nybörjare och erfarna
+              </li>
+            </ul>
+
+            <p class="why-train__description">
+              Du behöver inga förkunskaper för att börja – kom precis som du är.
+              Träningen anpassas efter din nivå och många uppskattar möjligheten
+              att träna tillsammans med familj och vänner.
+            </p>
+
+            <a href="/karate" class="cta cta-main">Läs mer om vår träning</a>
+          </div>
         </div>
       </section>
 
       <!-- Social proof -->
-      <section>
-        <h2>Vad våra medlemmar tycker</h2>
-        <div>Person</div>
-        <div>Person</div>
-        <div>Person</div>
+      <section class="social-proof wrapper">
+        <h2 class="section-title">Vad våra medlemmar tycker</h2>
+        <div class="social-proof__grid">
+          <div class="social-proof__grid-item">
+            <div class="social-proof__img-container">
+              <img
+                src="./images/placeholder-person.jpg"
+                alt="placeholder avatar"
+              />
+              <p>Lorem Ipsum</p>
+            </div>
+            <div class="social-proof__content">
+              <p class="social-proof__description">
+                <span
+                  ><i class="fa-solid fa-quote-left" aria-hidden="true"></i
+                ></span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                labore aliquid adipisci vitae mollitia consequatur facere
+                quibusdam aperiam possimus amet officia atque totam, beatae
+                nemo.
+              </p>
+            </div>
+          </div>
+          <div class="social-proof__grid-item">
+            <div class="social-proof__img-container">
+              <img
+                src="./images/placeholder-person.jpg"
+                alt="placeholder avatar"
+              />
+              <p>Lorem Ipsum</p>
+            </div>
+            <div class="social-proof__content">
+              <p class="social-proof__description">
+                <span
+                  ><i class="fa-solid fa-quote-left" aria-hidden="true"></i
+                ></span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                labore aliquid adipisci vitae mollitia consequatur facere
+                quibusdam aperiam possimus amet officia atque totam, beatae
+                nemo.
+              </p>
+            </div>
+          </div>
+
+          <div class="social-proof__grid-item">
+            <div class="social-proof__img-container">
+              <img
+                src="./images/placeholder-person.jpg"
+                alt="placeholder avatar"
+              />
+              <p>Lorem Ipsum</p>
+            </div>
+            <div class="social-proof__content">
+              <p class="social-proof__description">
+                <span
+                  ><i class="fa-solid fa-quote-left" aria-hidden="true"></i
+                ></span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+                labore aliquid adipisci vitae mollitia consequatur facere
+                quibusdam aperiam possimus amet officia atque totam, beatae
+                nemo.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- About -->
@@ -171,6 +274,27 @@
       <!-- CTA -->
       <section>CTA</section>
     </main>
-    <footer></footer>
+
+    <footer class="">
+      <div class="wrapper">
+        <div>
+          <div>
+            <div class="flex">
+              <img
+                src="./images/logga-helfigur_med_slanda_300dpi_final_no_layers.png"
+                alt=""
+              />
+              <p>Students of Goyu Ryu</p>
+              <div></div>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div>&copy; 2026 Students of Goju Ryu.</div>
+      </div>
+    </footer>
   </body>
 </html>
