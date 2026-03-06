@@ -76,22 +76,22 @@
 
       <!-- What we offer -->
       <section class="training wrapper">
-        <h2 class="training__title">Vad vi erbjuder</h2>
+        <h2 class="section-title">Vad vi erbjuder</h2>
 
         <div class="training__grid">
           <!-- Karate -->
-          <a href="#" class="training__card">
-            <div class="training__image-wrapper">
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
               <img
                 src="./images/karate.jpg"
                 alt="Karate träning"
-                class="training__image"
+                class="card__image"
               />
             </div>
 
-            <div class="training__content">
-              <h3 class="training__card-title">Karate</h3>
-              <p class="training__description">
+            <div class="card__content">
+              <h3 class="card-title">Karate</h3>
+              <p class="card__description">
                 Traditionell Goju Ryu karate med fokus på teknik, disciplin och
                 personlig utveckling.
               </p>
@@ -99,18 +99,18 @@
           </a>
 
           <!-- Arnis -->
-          <a href="#" class="training__card">
-            <div class="training__image-wrapper">
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
               <img
                 src="./images/karate.jpg"
                 alt="Karate träning"
-                class="training__image"
+                class="card__image"
               />
             </div>
 
-            <div class="training__content">
-              <h3 class="training__card-title">Arnis</h3>
-              <p class="training__description">
+            <div class="card__content">
+              <h3 class="card-title">Arnis</h3>
+              <p class="card__description">
                 Filippinsk kampsport med fokus på vapenteknik, rörelse och
                 självförsvar.
               </p>
@@ -118,18 +118,18 @@
           </a>
 
           <!-- Yoga -->
-          <a href="#" class="training__card">
-            <div class="training__image-wrapper">
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
               <img
                 src="./images/karate.jpg"
                 alt="Karate träning"
-                class="training__image"
+                class="card__image"
               />
             </div>
 
-            <div class="training__content">
-              <h3 class="training__card-title">Yoga</h3>
-              <p class="training__description">
+            <div class="card__content">
+              <h3 class="card-title">Yoga</h3>
+              <p class="card__description">
                 Yoga för balans, rörlighet och återhämtning som kompletterar din
                 kampsportsträning.
               </p>
@@ -256,45 +256,153 @@
       </section>
 
       <!-- About -->
-      <section>
-        <h2>Om oss</h2>
-        <p>beskrivande text</p>
-        <a href="">Läs mer</a>
+      <section class="about wrapper">
+        <h2 class="section-title">Om oss</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          perspiciatis officia quasi iste id architecto. Earum, non!
+          Perspiciatis quod tempora rerum quis cumque praesentium unde.
+        </p>
+        <a class="cta cta-main" href="">Läs mer</a>
       </section>
 
-      <section>
-        <h2>Var finns vi</h2>
-        <div>
-          <div>plats</div>
-          <div>plats</div>
-          <div>plats</div>
+      <section class="where wrapper">
+        <h2 class="section-title">Var finns vi</h2>
+        <div class="where__grid">
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="./images/mariefred.webp"
+                alt="Karate träning"
+                class="card__image"
+              />
+            </div>
+
+            <div class="card__content">
+              <h3 class="card-title">Yoga</h3>
+              <p class="card__description">
+                Yoga för balans, rörlighet och återhämtning som kompletterar din
+                kampsportsträning.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="./images/trosa.webp"
+                alt="Karate träning"
+                class="card__image"
+              />
+            </div>
+
+            <div class="card__content">
+              <h3 class="card-title">Yoga</h3>
+              <p class="card__description">
+                Yoga för balans, rörlighet och återhämtning som kompletterar din
+                kampsportsträning.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <div class="card__image-wrapper">
+              <img
+                src="./images/lund.webp"
+                alt="Karate träning"
+                class="card__image"
+              />
+            </div>
+
+            <div class="card__content">
+              <h3 class="card-title">Yoga</h3>
+              <p class="card__description">
+                Yoga för balans, rörlighet och återhämtning som kompletterar din
+                kampsportsträning.
+              </p>
+            </div>
+          </a>
         </div>
       </section>
 
       <!-- CTA -->
-      <section>CTA</section>
+      <section class="hero">
+        <div class="hero__media">
+          <img
+            class="hero__image"
+            src="./images/karate.jpg"
+            alt="Karate practitioner holding blackbelt"
+          />
+        </div>
+        <div class="hero__content wrapper">
+          <h2>Varje resa börjar med ett första steg</h2>
+          <a class="cta cta-main" href="">Kontakta oss</a>
+        </div>
+      </section>
     </main>
 
-    <footer class="">
-      <div class="wrapper">
-        <div>
-          <div>
-            <div class="flex">
-              <img
-                src="./images/logga-helfigur_med_slanda_300dpi_final_no_layers.png"
-                alt=""
-              />
-              <p>Students of Goyu Ryu</p>
-              <div></div>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <!-- Column 1: Logo + About + Contact -->
+        <div class="footer__column footer__column--about">
+          <div class="footer__logo-container">
+            <img
+              src="./images/logga-helfigur_med_slanda_300dpi_final_no_layers.png"
+              alt="Goju Ryu Karate emblem"
+              class="footer__logo"
+            />
+            <p class="footer__brand">Students of Goju Ryu</p>
+          </div>
+          <p class="footer__description">
+            Vi erbjuder kampsportsträning för alla åldrar med fokus på teknik,
+            filosofi och gemenskap.
+          </p>
+          <div class="footer__contact">
+            <p>Email: <a href="mailto:info@gojuryu.se">info@gojuryu.se</a></p>
+            <p>Telefon: <a href="tel:+46123456789">+46 123 456 789</a></p>
+            <div class="footer__socials">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
 
-        <div>&copy; 2026 Students of Goju Ryu.</div>
+        <!-- Column 2: Training -->
+        <div class="footer__column footer__column--links">
+          <h4 class="footer__title">Träning</h4>
+          <ul class="footer__list">
+            <li><a href="#">Karate</a></li>
+            <li><a href="#">Arnis</a></li>
+            <li><a href="#">Yoga</a></li>
+            <li><a href="#">Workshops</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Om oss / Företag -->
+        <div class="footer__column footer__column--links">
+          <h4 class="footer__title">Om oss</h4>
+          <ul class="footer__list">
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">Instruktörer</a></li>
+            <li><a href="#">Dokument</a></li>
+            <li><a href="#">Vanliga frågor</a></li>
+          </ul>
+        </div>
+
+        <!-- Optional Column 4: Praktisk info -->
+        <div class="footer__column footer__column--links">
+          <h4 class="footer__title">Praktisk info</h4>
+          <ul class="footer__list">
+            <li><a href="#">Schema</a></li>
+            <li><a href="#">Priser</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Hitta hit</a></li>
+          </ul>
+        </div>
       </div>
+
+      <div class="footer__copy wrapper">&copy; 2026 Students of Goju Ryu.</div>
     </footer>
   </body>
 </html>
